@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t"><title id="t">Ulaşım &amp; Trafik</title>
+<circle cx="73" cy="191" r="24" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M73 167 V143 A40 40 0 0 1 113 103 H145 A40 40 0 0 0 185 63" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="185" cy="63" r="22" fill="currentColor"/>
+</svg>

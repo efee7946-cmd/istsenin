@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t"><title id="t">Şehir &amp; Katılım</title>
+<path d="M32 208 H224" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M72 208 V176 A56 56 0 0 1 184 176 V208" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 208 V88 M216 208 V88" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="128" cy="68" r="20" fill="currentColor"/>
+</svg>
