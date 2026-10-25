@@ -9,7 +9,7 @@
 | Yol | Ne |
 | --- | --- |
 | `index.html` | **Güncel prototip.** 69 uygulama, resmî logolar gömülü, 8 kategori. Tek dosya, internet olmadan da açılır |
-| `prototip/surumler/` | Önceki sürümler: `v0-eylul` (ilk prototip), `v1-senin-ui` (Senin UI ve ses tonuna göre), `v1-1-tema-qr` (tema butonu, QR düzeltmesi) |
+| `prototip/surumler/` | Önceki sürümler: `v00-ilk-hal` (mevcut uygulama, 23 Eylül 2026 ekran görüntülerinden birebir), `v0-eylul` (ilk prototip), `v1-senin-ui` (Senin UI ve ses tonuna göre), `v1-1-tema-qr` (tema butonu, QR düzeltmesi) |
 | `ab/` | A/B karşılaştırmaları: `tum-uygulamalar-ab` (yalnızca Tüm Uygulamalar), `metin-odakli-ab`, `enerjik-ab` (B: hızlı işlemler, dolgun renkler) |
 | `design-system/senin-ui.html` | Senin UI gezgini: açık ve koyu temada token'lar, 13 bileşen |
 | `design-system/kaynak/` | Senin UI kaynak projesi (Vite, vanilla JS). Token'ların tek kaynağı `src/tokens/` |
