@@ -13,9 +13,9 @@
 | `ab/` | A/B karşılaştırmaları: `tum-uygulamalar-ab` (yalnızca Tüm Uygulamalar), `metin-odakli-ab`, `enerjik-ab` (B: hızlı işlemler, dolgun renkler) |
 | `design-system/senin-ui.html` | Senin UI gezgini: açık ve koyu temada token'lar, 13 bileşen |
 | `design-system/kaynak/` | Senin UI kaynak projesi (Vite, vanilla JS). Token'ların tek kaynağı `src/tokens/` |
-| `handoff/developer-handoff.md` | Developer handoff: kararlar, bileşenler, state'ler, uç durumlar, etkileşimler, erişilebilirlik, ölçüm planı, açık sorular, v2 değişiklikleri |
-| `handoff/olcum-plani.md` | Ölçüm planı: metrik kartları, ölçüm yöntemi, test görevleri, tracking plan, hipotez |
-| `handoff/analiz-ve-aksiyon.*` | Kullanıcı görüşmesi ile yapay session replay karşılaştırması ve v2 aksiyonu |
+| `handoff/developer-handoff.docx` | Developer handoff: kararlar, bileşenler, state'ler, uç durumlar, etkileşimler, erişilebilirlik, ölçüm planı, açık sorular, v2 değişiklikleri |
+| `handoff/olcum-plani.docx` | Ölçüm planı: metrik kartları, ölçüm yöntemi, test görevleri, tracking plan, hipotez |
+| `handoff/analiz-ve-aksiyon.docx` | Kullanıcı görüşmesi ile yapay session replay karşılaştırması ve v2 aksiyonu |
 | `ikonlar/` | Kategori ikonu önerileri (çizgi ve izometrik): örnek sayfalar, SVG'ler ve onları üreten Python betikleri. Prototipe eklenmedi |
 | `skills/` | Çalışmada kullanılan Claude skill'leri: `istanbul-senin-tov` (ses tonu), `outsider-design-review` (heuristic review), `outsiders-metric-coach` (ölçüm planı) |
 
@@ -33,7 +33,7 @@ npm run dev
 
 ## Notlar
 
-- Developer handoff'un canlı hali claude.ai'deki belgede; buradaki Markdown, 25 Ekim 2026'daki dışa aktarımı.
+- Developer handoff'un canlı hali claude.ai'deki belgede; buradaki Word dosyaları, 25 Ekim 2026'daki dışa aktarımı.
 - Yapay session replay'ler tahmindir, veri değildir. Aksiyonlar yalnızca gerçek kullanıcıyla doğrulanan bulgulara dayanır.
 
 ## Kaynaklar ve haklar
