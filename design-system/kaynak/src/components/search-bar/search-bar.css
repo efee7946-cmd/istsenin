@@ -1,0 +1,33 @@
+.is-search { display: flex; gap: var(--space-2); width: 100%; max-width: 360px; font-family: var(--font-family); }
+.is-search--on-brand { padding: var(--space-4); background: var(--surface-brand); border-radius: var(--radius-xl); }
+.is-search__box {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: var(--space-3);
+  height: var(--size-control-md); padding: 0 var(--space-4); border-radius: var(--radius-lg);
+  color: var(--text-secondary); border: 1.5px solid transparent; cursor: text;
+  transition: border-color var(--motion-fast), box-shadow var(--motion-fast), background var(--motion-fast);
+}
+.is-search--on-brand .is-search__box { background: var(--surface-default); }
+.is-search--on-surface .is-search__box { background: var(--surface-subtle); }
+.is-search__input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--text-primary);
+  font: 700 var(--type-body-lg-size) / var(--type-body-lg-line) var(--font-family); letter-spacing: var(--type-body-lg-tracking);
+}
+.is-search__input::placeholder { color: var(--text-secondary); font-weight: var(--type-body-lg-weight); }
+.is-search__input::-webkit-search-cancel-button { display: none; }
+.is-search__clear { display: flex; border: 0; background: transparent; color: var(--text-secondary); padding: var(--space-1); border-radius: var(--radius-sm); cursor: pointer; }
+.is-search__filter {
+  width: var(--size-control-md); height: var(--size-control-md); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  border-radius: var(--radius-lg); border: 1px solid var(--border-default); background: var(--surface-default); color: var(--text-primary);
+}
+.is-search--on-brand .is-search__filter { border-color: transparent; }
+.is-search__filter:hover { background: var(--surface-hover); }
+.is-search__filter:focus-visible, .is-search__clear:focus-visible { outline: 2px solid var(--border-focus); outline-offset: 2px; }
+
+.is-search__box:hover, .is-search.is-hover .is-search__box { border-color: var(--border-strong); }
+.is-search.is-pressed .is-search__box { background: var(--surface-pressed); }
+.is-search__box:focus-within, .is-search.is-focus .is-search__box { border-color: var(--border-focus); box-shadow: 0 0 0 4px var(--border-focus-ring); }
+.is-search.is-disabled .is-search__box { color: var(--text-disabled); border-color: transparent; cursor: not-allowed; }
+.is-search.is-disabled .is-search__input::placeholder { color: var(--text-disabled); }
+.is-search.is-disabled .is-search__filter { color: var(--text-disabled); cursor: not-allowed; }
+.is-search .is-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

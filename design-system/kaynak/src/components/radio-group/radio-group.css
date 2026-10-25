@@ -1,0 +1,28 @@
+.is-radio { display: flex; flex-direction: column; gap: var(--space-2); font-family: var(--font-family); width: 100%; max-width: 360px; }
+.is-radio__legend {
+  margin: 0; font: var(--type-overline-weight) var(--type-overline-size) / var(--type-overline-line) var(--font-family);
+  letter-spacing: var(--type-overline-tracking); text-transform: uppercase; color: var(--text-secondary);
+}
+.is-radio__list { display: flex; flex-direction: column; }
+.is-radio--horizontal .is-radio__list { flex-direction: row; flex-wrap: wrap; gap: var(--space-5); }
+.is-radio__opt {
+  display: flex; align-items: center; gap: var(--space-3); min-height: 46px; padding: 0; border: 0; background: transparent;
+  font: 600 var(--type-body-md-size) / var(--type-body-md-line) var(--font-family); color: var(--text-primary);
+  cursor: pointer; text-align: left; border-radius: var(--radius-sm);
+}
+.is-radio__dot {
+  width: 22px; height: 22px; flex-shrink: 0; border-radius: var(--radius-pill); border: 2px solid var(--border-strong);
+  background: var(--surface-default); transition: border-color var(--motion-fast), border-width var(--motion-fast), transform var(--motion-fast);
+}
+.is-radio__opt.is-selected .is-radio__dot { border: 7px solid var(--action-primary); }
+.is-radio__msg { margin: 0; font: var(--type-label-weight) var(--type-body-sm-size) / var(--type-body-sm-line) var(--font-family); color: var(--feedback-error); }
+
+.is-radio__opt:hover .is-radio__dot, .is-radio.is-hover .is-radio__opt:first-child .is-radio__dot { border-color: var(--action-primary-hover); }
+.is-radio__opt:active .is-radio__dot, .is-radio.is-pressed .is-radio__opt:first-child .is-radio__dot { transform: scale(0.88); }
+.is-radio__opt:focus-visible { outline: none; }
+.is-radio__opt:focus-visible .is-radio__dot, .is-radio.is-focus .is-radio__opt.is-selected .is-radio__dot { box-shadow: 0 0 0 3px var(--surface-default), 0 0 0 5px var(--border-focus); }
+.is-radio.is-error .is-radio__dot { border-color: var(--feedback-error); }
+.is-radio.is-error .is-radio__opt.is-selected .is-radio__dot { border-color: var(--feedback-error); }
+.is-radio__opt:disabled { cursor: not-allowed; color: var(--text-disabled); }
+.is-radio.is-disabled .is-radio__dot { border-color: var(--border-default); background: var(--surface-subtle); }
+.is-radio.is-disabled .is-radio__opt.is-selected .is-radio__dot { border-color: var(--surface-pressed); }

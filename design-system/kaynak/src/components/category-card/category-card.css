@@ -1,0 +1,31 @@
+.is-catcard {
+  --cc-fg: var(--action-primary); --cc-bg: var(--surface-default);
+  font-family: var(--font-family); cursor: pointer; border: 0;
+  transition: transform var(--motion-fast), filter var(--motion-fast), background var(--motion-fast), box-shadow var(--motion-fast);
+}
+.is-catcard--tile {
+  width: 86px; min-height: 96px; padding: var(--space-3) var(--space-1) 10px; border-radius: var(--radius-xl);
+  background: var(--cc-bg); color: var(--cc-fg);
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center;
+}
+.is-catcard--tile .is-catcard__name { font: 800 var(--type-caption-size) / 1.2 var(--font-family); }
+.is-catcard--tile .is-catcard__count { font: var(--type-caption-weight) 11px / 1.2 var(--font-family); color: var(--text-primary); opacity: 0.7; }
+.is-catcard--tile.is-catcard--all { background: var(--surface-default); box-shadow: inset 0 0 0 1.5px var(--action-primary); color: var(--action-primary); }
+.is-catcard--tile.is-catcard--all .is-catcard__count { color: var(--action-primary); }
+
+.is-catcard--row {
+  width: 100%; max-width: 360px; display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-2);
+  background: transparent; color: var(--text-primary); text-align: left; border-radius: var(--radius-lg);
+}
+.is-catcard--row .is-catcard__tile { width: 48px; height: 48px; border-radius: var(--radius-lg); background: var(--cc-bg); color: var(--cc-fg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.is-catcard--row.is-catcard--all .is-catcard__tile { box-shadow: inset 0 0 0 1.5px var(--action-primary); }
+.is-catcard--row .is-catcard__name { flex: 1; font: 800 var(--type-body-md-size) / var(--type-body-md-line) var(--font-family); }
+.is-catcard--row .is-catcard__count { font-weight: 600; color: var(--text-secondary); }
+.is-catcard__chev { display: flex; color: var(--text-secondary); }
+
+.is-catcard--tile:hover, .is-catcard--tile.is-hover { filter: brightness(0.96); box-shadow: var(--shadow-sm); }
+.is-catcard--row:hover, .is-catcard--row.is-hover { background: var(--surface-hover); }
+.is-catcard:active, .is-catcard.is-pressed { transform: scale(0.96); }
+.is-catcard--row:active, .is-catcard--row.is-pressed { background: var(--surface-pressed); transform: none; }
+.is-catcard:focus-visible, .is-catcard.is-focus { outline: 2px solid var(--border-focus); outline-offset: 2px; }
+.is-catcard:disabled, .is-catcard.is-disabled { cursor: not-allowed; filter: grayscale(1); opacity: 0.5; transform: none; }

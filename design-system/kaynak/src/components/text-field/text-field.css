@@ -1,0 +1,31 @@
+.is-field { display: flex; flex-direction: column; gap: var(--space-2); width: 100%; max-width: 360px; font-family: var(--font-family); }
+.is-field__label { font: var(--type-label-weight) var(--type-label-size) / var(--type-label-line) var(--font-family); color: var(--text-primary); }
+.is-field__req { color: var(--feedback-error); }
+.is-field__box {
+  display: flex; align-items: center; gap: var(--space-2);
+  height: var(--size-control-lg); padding: 0 var(--space-4);
+  border-radius: var(--radius-lg); background: var(--surface-subtle);
+  border: 1.5px solid var(--surface-subtle);
+  transition: border-color var(--motion-fast), box-shadow var(--motion-fast), background var(--motion-fast);
+}
+.is-field__input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+  font: 700 var(--type-body-lg-size) / var(--type-body-lg-line) var(--font-family); letter-spacing: 0.4px;
+  color: var(--text-primary);
+}
+.is-field__input::placeholder { color: var(--text-secondary); font-weight: var(--type-body-md-weight); letter-spacing: 0; }
+.is-field__icon-btn { border: 0; background: transparent; color: var(--text-secondary); display: flex; padding: var(--space-1); border-radius: var(--radius-sm); cursor: pointer; }
+.is-field__icon-btn:focus-visible { outline: 2px solid var(--border-focus); }
+.is-field__err-ico { display: flex; color: var(--feedback-error); }
+.is-field__msg { margin: 0; font: var(--type-body-sm-weight) var(--type-body-sm-size) / var(--type-body-sm-line) var(--font-family); color: var(--text-secondary); }
+
+.is-field__box:hover, .is-field.is-hover .is-field__box { border-color: var(--border-strong); }
+.is-field.is-pressed .is-field__box { border-color: var(--border-strong); background: var(--surface-pressed); }
+.is-field__box:focus-within, .is-field.is-focus .is-field__box {
+  border-color: var(--border-focus); background: var(--surface-default); box-shadow: 0 0 0 4px var(--border-focus-ring);
+}
+.is-field.is-error .is-field__box { border-color: var(--feedback-error); background: var(--feedback-error-subtle); }
+.is-field.is-error .is-field__msg { color: var(--feedback-error); font-weight: var(--type-label-weight); }
+.is-field.is-disabled .is-field__box { border-color: var(--surface-subtle); cursor: not-allowed; }
+.is-field.is-disabled .is-field__label, .is-field.is-disabled .is-field__input, .is-field.is-disabled .is-field__msg { color: var(--text-disabled); }
+.is-field.is-disabled .is-field__input { cursor: not-allowed; }

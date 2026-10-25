@@ -1,0 +1,32 @@
+.is-toggle {
+  --tg-w: 50px; --tg-h: 30px; --tg-thumb: 24px;
+  display: inline-flex; align-items: center; gap: var(--space-4); max-width: 360px; width: 100%;
+  padding: var(--space-2) 0; border: 0; background: transparent; text-align: left; cursor: pointer;
+  font-family: var(--font-family); color: var(--text-primary); border-radius: var(--radius-md);
+}
+.is-toggle--sm { --tg-w: 40px; --tg-h: 24px; --tg-thumb: 18px; }
+.is-toggle__text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.is-toggle__label { font: 700 var(--type-body-md-size) / var(--type-body-md-line) var(--font-family); }
+.is-toggle__desc { font: var(--type-body-sm-weight) var(--type-body-sm-size) / var(--type-body-sm-line) var(--font-family); color: var(--text-secondary); }
+.is-toggle__track {
+  flex-shrink: 0; width: var(--tg-w); height: var(--tg-h); padding: 3px; border-radius: var(--radius-pill);
+  background: var(--border-strong); display: flex; transition: background var(--motion-base);
+}
+.is-toggle__thumb {
+  width: var(--tg-thumb); height: var(--tg-thumb); border-radius: var(--radius-pill); background: var(--surface-default);
+  box-shadow: var(--shadow-sm); transition: transform var(--motion-base);
+}
+.is-toggle.is-on .is-toggle__track { background: var(--action-primary); }
+.is-toggle.is-on .is-toggle__thumb { transform: translateX(calc(var(--tg-w) - var(--tg-thumb) - 6px)); }
+
+.is-toggle:hover .is-toggle__track, .is-toggle.is-hover .is-toggle__track { background: var(--text-secondary); }
+.is-toggle.is-on:hover .is-toggle__track, .is-toggle.is-on.is-hover .is-toggle__track { background: var(--action-primary-hover); }
+.is-toggle:active .is-toggle__thumb, .is-toggle.is-pressed .is-toggle__thumb { width: calc(var(--tg-thumb) + 4px); }
+.is-toggle.is-on:active .is-toggle__thumb, .is-toggle.is-on.is-pressed .is-toggle__thumb { transform: translateX(calc(var(--tg-w) - var(--tg-thumb) - 10px)); }
+.is-toggle:focus-visible, .is-toggle.is-focus { outline: none; }
+.is-toggle:focus-visible .is-toggle__track, .is-toggle.is-focus .is-toggle__track { box-shadow: 0 0 0 3px var(--surface-default), 0 0 0 5px var(--border-focus); }
+.is-toggle:disabled, .is-toggle.is-disabled { cursor: not-allowed; }
+.is-toggle:disabled .is-toggle__track, .is-toggle.is-disabled .is-toggle__track { background: var(--surface-pressed); }
+.is-toggle.is-on:disabled .is-toggle__track, .is-toggle.is-on.is-disabled .is-toggle__track { background: var(--action-primary-subtle); }
+.is-toggle:disabled .is-toggle__label, .is-toggle.is-disabled .is-toggle__label,
+.is-toggle:disabled .is-toggle__desc, .is-toggle.is-disabled .is-toggle__desc { color: var(--text-disabled); }

@@ -1,0 +1,21 @@
+{
+  "name": "senin-ui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Senin UI: İstanbul Senin görsel diliyle hazırlanmış design system ve component kütüphanesi",
+  "type": "module",
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "predev": "npm run tokens",
+    "dev": "vite",
+    "prebuild": "npm run tokens",
+    "build": "vite build",
+    "build:single": "npm run tokens && vite build --mode single",
+    "preview": "vite preview",
+    "lint:tokens": "node scripts/check-no-hex.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-singlefile": "^2.0.0"
+  }
+}

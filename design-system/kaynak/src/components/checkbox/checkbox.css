@@ -1,0 +1,25 @@
+.is-check { display: flex; flex-direction: column; gap: var(--space-1); font-family: var(--font-family); max-width: 360px; }
+.is-check__row {
+  display: flex; align-items: center; gap: var(--space-3); min-height: 44px; padding: 0;
+  border: 0; background: transparent; text-align: left; cursor: pointer; color: var(--text-primary); border-radius: var(--radius-sm);
+}
+.is-check__label { font: 600 var(--type-body-md-size) / var(--type-body-md-line) var(--font-family); }
+.is-check__box {
+  width: 24px; height: 24px; flex-shrink: 0; border-radius: 7px; border: 2px solid var(--border-strong);
+  background: var(--surface-default); color: var(--action-on-primary);
+  display: flex; align-items: center; justify-content: center; transition: background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast);
+}
+.is-check.is-checked .is-check__box { background: var(--action-primary); border-color: var(--action-primary); }
+.is-check__msg { margin: 0 0 0 36px; font: var(--type-body-sm-weight) var(--type-body-sm-size) / var(--type-body-sm-line) var(--font-family); color: var(--text-secondary); }
+
+.is-check__row:hover .is-check__box, .is-check.is-hover .is-check__box { border-color: var(--action-primary); }
+.is-check.is-checked .is-check__row:hover .is-check__box, .is-check.is-checked.is-hover .is-check__box { background: var(--action-primary-hover); border-color: var(--action-primary-hover); }
+.is-check__row:active .is-check__box, .is-check.is-pressed .is-check__box { transform: scale(0.9); }
+.is-check__row:focus-visible, .is-check.is-focus .is-check__row { outline: none; }
+.is-check__row:focus-visible .is-check__box, .is-check.is-focus .is-check__box { box-shadow: 0 0 0 3px var(--surface-default), 0 0 0 5px var(--border-focus); }
+.is-check.is-error .is-check__box { border-color: var(--feedback-error); }
+.is-check.is-error.is-checked .is-check__box { background: var(--feedback-error); }
+.is-check.is-error .is-check__msg { color: var(--feedback-error); font-weight: var(--type-label-weight); }
+.is-check__row:disabled, .is-check.is-disabled .is-check__row { cursor: not-allowed; color: var(--text-disabled); }
+.is-check.is-disabled .is-check__box { border-color: var(--border-default); background: var(--surface-subtle); color: var(--text-disabled); }
+.is-check.is-disabled.is-checked .is-check__box { background: var(--surface-pressed); border-color: var(--surface-pressed); }

@@ -1,0 +1,18 @@
+.is-chip {
+  display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 var(--space-4);
+  border-radius: var(--radius-md); border: 1px solid var(--border-default); background: var(--surface-default); color: var(--text-primary);
+  font: var(--type-label-weight) var(--type-label-size) / var(--type-label-line) var(--font-family); white-space: nowrap; cursor: pointer;
+  transition: background var(--motion-fast), border-color var(--motion-fast), transform var(--motion-fast);
+}
+.is-chip--sm { height: 32px; padding: 0 var(--space-3); font-size: var(--type-caption-size); }
+.is-chip__dot { width: 8px; height: 8px; border-radius: var(--radius-pill); flex-shrink: 0; }
+.is-chip__count { font-weight: 600; opacity: 0.85; }
+.is-chip.is-selected { background: var(--action-primary); border-color: var(--action-primary); color: var(--action-on-primary); }
+
+.is-chip:hover, .is-chip.is-hover { background: var(--surface-hover); border-color: var(--border-strong); }
+.is-chip.is-selected:hover, .is-chip.is-selected.is-hover { background: var(--action-primary-hover); border-color: var(--action-primary-hover); }
+.is-chip:active, .is-chip.is-pressed { transform: scale(0.96); background: var(--surface-pressed); }
+.is-chip.is-selected:active, .is-chip.is-selected.is-pressed { background: var(--action-primary-pressed); }
+.is-chip:focus-visible, .is-chip.is-focus { outline: 2px solid var(--border-focus); outline-offset: 2px; }
+.is-chip:disabled, .is-chip.is-disabled { cursor: not-allowed; transform: none; color: var(--text-disabled); background: var(--surface-subtle); border-color: var(--surface-subtle); }
+.is-chip:disabled .is-chip__dot, .is-chip.is-disabled .is-chip__dot { opacity: 0.4; }

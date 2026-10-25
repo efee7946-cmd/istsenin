@@ -1,0 +1,22 @@
+.is-select { display: flex; flex-direction: column; gap: var(--space-2); width: 100%; max-width: 360px; font-family: var(--font-family); }
+.is-select__label { font: var(--type-label-weight) var(--type-label-size) / var(--type-label-line) var(--font-family); color: var(--text-primary); }
+.is-select__box { position: relative; }
+.is-select__native {
+  appearance: none; -webkit-appearance: none; width: 100%; height: var(--size-control-lg);
+  padding: 0 calc(var(--space-4) + 28px) 0 var(--space-4);
+  border-radius: var(--radius-lg); border: 1.5px solid var(--surface-subtle); background: var(--surface-subtle);
+  font: 700 var(--type-body-md-size) / var(--type-body-md-line) var(--font-family); color: var(--text-primary); cursor: pointer;
+  transition: border-color var(--motion-fast), box-shadow var(--motion-fast);
+}
+.is-select.is-empty .is-select__native { color: var(--text-secondary); font-weight: var(--type-body-md-weight); }
+.is-select__native option { color: var(--text-primary); background: var(--surface-raised); }
+.is-select__chev { position: absolute; right: var(--space-4); top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none; display: flex; }
+.is-select__msg { margin: 0; font: var(--type-body-sm-weight) var(--type-body-sm-size) / var(--type-body-sm-line) var(--font-family); color: var(--text-secondary); }
+
+.is-select__native:hover, .is-select.is-hover .is-select__native { border-color: var(--border-strong); }
+.is-select__native:active, .is-select.is-pressed .is-select__native { background: var(--surface-pressed); }
+.is-select__native:focus-visible, .is-select.is-focus .is-select__native { outline: none; border-color: var(--border-focus); background: var(--surface-default); box-shadow: 0 0 0 4px var(--border-focus-ring); }
+.is-select.is-error .is-select__native { border-color: var(--feedback-error); background: var(--feedback-error-subtle); }
+.is-select.is-error .is-select__msg { color: var(--feedback-error); font-weight: var(--type-label-weight); }
+.is-select.is-disabled .is-select__native { color: var(--text-disabled); cursor: not-allowed; border-color: var(--surface-subtle); }
+.is-select.is-disabled .is-select__label, .is-select.is-disabled .is-select__chev, .is-select.is-disabled .is-select__msg { color: var(--text-disabled); }

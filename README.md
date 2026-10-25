@@ -1,21 +1,40 @@
-# İstanbul Senin · Ana Sayfa ve Tüm Uygulamalar prototipi
+# İstanbul Senin · Yeniden tasarım
 
-İstanbul Senin uygulamasının ana sayfası, Tüm Uygulamalar, kategori ve arama ekranları için tıklanabilir prototip. Senin UI bileşenleri ve İstanbul Senin ses tonuyla hazırlandı. Bir uygulamaya dokununca yalnızca bildirim çıkar, uygulamanın içi açılmaz.
+İBB'nin İstanbul Senin uygulamasının Ana Sayfa, Tüm Uygulamalar, kategori ve arama ekranları için Gestalt ilkelerine dayanan yeniden tasarım çalışması: tıklanabilir prototipler, A/B karşılaştırmaları, Senin UI tasarım sistemi, developer handoff ve ölçüm planı.
+
+**HMW:** Arayüzü karışık bulup yine de kullanmaya devam eden kullanıcının, aradığı hizmeti kısa sürede bulma ihtiyacını, hizmetler uygulamanın içinde kayboluyor gerçeğine rağmen nasıl karşılayabiliriz?
 
 ## İçerik
 
 | Yol | Ne |
 | --- | --- |
-| `index.html` | Prototip. Tek dosya; 69 uygulamanın logoları içine gömülü, internet olmadan da açılır |
-| `ikonlar/cizgi/` | Kategori ikonları önerisi, çizgi stil: örnek sayfa ve 8 SVG |
-| `ikonlar/izometrik/` | Kategori ikonları önerisi, izometrik stil: örnek sayfa ve 8 SVG |
-| `docs/analiz-ve-aksiyon.md` | Kullanıcı görüşmesi ile yapay session replay karşılaştırması ve v2 aksiyonu (Word sürümü yanında) |
-
-İkon setleri yalnızca öneri; prototipe eklenmedi.
+| `index.html` | **Güncel prototip.** 69 uygulama, resmî logolar gömülü, 8 kategori. Tek dosya, internet olmadan da açılır |
+| `prototip/surumler/` | Önceki sürümler: `v0-eylul` (ilk prototip), `v1-senin-ui` (Senin UI ve ses tonuna göre), `v1-1-tema-qr` (tema butonu, QR düzeltmesi) |
+| `ab/` | A/B karşılaştırmaları: `tum-uygulamalar-ab` (yalnızca Tüm Uygulamalar), `metin-odakli-ab`, `enerjik-ab` (B: hızlı işlemler, dolgun renkler) |
+| `design-system/senin-ui.html` | Senin UI gezgini: açık ve koyu temada token'lar, 13 bileşen |
+| `design-system/kaynak/` | Senin UI kaynak projesi (Vite, vanilla JS). Token'ların tek kaynağı `src/tokens/` |
+| `handoff/developer-handoff.md` | Developer handoff: kararlar, bileşenler, state'ler, uç durumlar, etkileşimler, erişilebilirlik, ölçüm planı, açık sorular, v2 değişiklikleri |
+| `handoff/olcum-plani.md` | Ölçüm planı: metrik kartları, ölçüm yöntemi, test görevleri, tracking plan, hipotez |
+| `handoff/analiz-ve-aksiyon.*` | Kullanıcı görüşmesi ile yapay session replay karşılaştırması ve v2 aksiyonu |
+| `ikonlar/` | Kategori ikonu önerileri (çizgi ve izometrik): örnek sayfalar, SVG'ler ve onları üreten Python betikleri. Prototipe eklenmedi |
+| `skills/` | Çalışmada kullanılan Claude skill'leri: `istanbul-senin-tov` (ses tonu), `outsider-design-review` (heuristic review), `outsiders-metric-coach` (ölçüm planı) |
 
 ## Çalıştırma
 
-`index.html` dosyasını tarayıcıda aç. Masaüstünde telefon çerçevesi içinde, 760 px'in altındaki ekranlarda tam ekran görünür.
+HTML dosyalarını tarayıcıda açman yeterli. Masaüstünde telefon çerçevesi içinde, 760 px'in altındaki ekranlarda tam ekran görünür.
+
+Tasarım sistemi kaynağı için:
+
+```bash
+cd design-system/kaynak
+npm install
+npm run dev
+```
+
+## Notlar
+
+- Developer handoff'un canlı hali claude.ai'deki belgede; buradaki Markdown, 25 Ekim 2026'daki dışa aktarımı.
+- Yapay session replay'ler tahmindir, veri değildir. Aksiyonlar yalnızca gerçek kullanıcıyla doğrulanan bulgulara dayanır.
 
 ## Kaynaklar ve haklar
 
