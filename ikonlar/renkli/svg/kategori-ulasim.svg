@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Ulaşım &amp; Trafik">
+<circle cx="60" cy="62" r="42" fill="#1E6BF0"/>
+<path d="M22 94 q7 -6 14 0 t14 0 t14 0 t14 0 t14 0" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+<rect x="63" y="28" width="11" height="20" fill="#FFC530"/><rect x="63" y="28" width="11" height="6" fill="#1B2440"/>
+<rect x="38" y="46" width="44" height="12" rx="2" fill="#FFFFFF"/>
+<rect x="26" y="57" width="70" height="14" fill="#FFFFFF"/>
+<rect x="32" y="61" width="6" height="6" fill="#1E6BF0"/><rect x="42" y="61" width="6" height="6" fill="#1E6BF0"/><rect x="52" y="61" width="6" height="6" fill="#1E6BF0"/><rect x="62" y="61" width="6" height="6" fill="#1E6BF0"/><rect x="72" y="61" width="6" height="6" fill="#1E6BF0"/><rect x="82" y="61" width="6" height="6" fill="#1E6BF0"/>
+<path d="M14 70 H106 L96 84 H24 Z" fill="#1B2440"/>
+<rect x="20" y="70" width="80" height="3" fill="#F2542D"/>
+
+</svg>

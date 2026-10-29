@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Eğitim &amp; Gençlik">
+<circle cx="60" cy="56" r="40" fill="#FFC530"/>
+<path d="M60 82 L16 72 V104 L60 112 Z" fill="#1E6BF0"/>
+<path d="M60 82 L104 72 V104 L60 112 Z" fill="#1554C4"/>
+<path d="M24 82 L50 87 M24 91 L50 96 M70 87 L96 82 M70 96 L96 91" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+<path d="M36 48 V64 Q60 76 84 64 V48 Z" fill="#2E3A5E"/>
+<path d="M60 24 L106 40 L60 56 L14 40 Z" fill="#1B2440"/>
+<path d="M60 40 L94 46 V62" fill="none" stroke="#F2542D" stroke-width="3" stroke-linecap="round"/>
+<path d="M88 60 L91 65 L94 58 L97 65 L100 60 V69 A6 6 0 0 1 88 69 Z" fill="#F2542D"/>
+
+</svg>

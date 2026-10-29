@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Sağlık &amp; Acil">
+<circle cx="60" cy="60" r="42" fill="#1B2440"/>
+<path d="M34 14 V36 A26 26 0 0 0 86 36 V14" fill="none" stroke="#FFC530" stroke-width="7" stroke-linecap="round"/>
+<circle cx="34" cy="13" r="5" fill="#FFFFFF"/><circle cx="86" cy="13" r="5" fill="#FFFFFF"/>
+<path d="M60 62 V84 A14 14 0 0 0 88 84 V80" fill="none" stroke="#FFC530" stroke-width="7" stroke-linecap="round"/>
+<circle cx="88" cy="76" r="13" fill="#F2542D"/><circle cx="88" cy="76" r="5" fill="#FFFFFF"/>
+<path d="M54 20 h12 v9 h9 v12 h-9 v9 h-12 v-9 h-9 v-12 h9 z" fill="#F7A8CB"/>
+
+</svg>

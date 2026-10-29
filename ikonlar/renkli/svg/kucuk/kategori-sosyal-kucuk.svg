@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Sosyal Destek"><circle cx="60" cy="60" r="46" fill="#1E6BF0"/>
+<path transform="translate(60 46) scale(3.2)" fill="#F7A8CB" d="M0 6 C-6 1 -10 -2 -10 -6 A5 5 0 0 1 0 -7 A5 5 0 0 1 10 -6 C10 -2 6 1 0 6 Z"/>
+<path d="M4 72 C22 64 42 66 54 76 C58 80 60 84 60 88 V108 C42 110 20 104 6 96 Z" fill="#FFC530"/>
+<path d="M116 72 C98 64 78 66 66 76 C62 80 60 84 60 88 V108 C78 110 100 104 114 96 Z" fill="#F2542D"/>
+</svg>

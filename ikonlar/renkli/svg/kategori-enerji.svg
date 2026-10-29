@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Su &amp; Enerji">
+<circle cx="60" cy="58" r="40" fill="#F7A8CB"/>
+<rect x="24" y="96" width="72" height="16" fill="#F2542D"/>
+<path d="M30 112 v-6 a6 6 0 0 1 12 0 v6 z" fill="#1B2440"/><path d="M54 112 v-6 a6 6 0 0 1 12 0 v6 z" fill="#1B2440"/><path d="M78 112 v-6 a6 6 0 0 1 12 0 v6 z" fill="#1B2440"/>
+<path d="M60 8 C60 8 30 44 30 64 A30 30 0 0 0 60 94 Z" fill="#1E6BF0"/><path d="M60 8 C60 8 90 44 90 64 A30 30 0 0 1 60 94 Z" fill="#FFC530"/><path d="M66 36 L46 68 H59 L52 90 L76 56 H63 L70 36 Z" fill="#FFFFFF"/>
+
+</svg>
