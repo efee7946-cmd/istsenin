@@ -103,11 +103,14 @@ button.is-search__box{background:var(--surface-default)}
 .jig .cell .tile{animation:jig .28s ease-in-out infinite alternate}
 @keyframes jig{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
 @media (prefers-reduced-motion: reduce){.screen,.bsheet,.toast{transition:none}.jig .cell .tile{animation:none}}
-/* Tema butonu: Senin UI · Button (secondary, sm) */
-.theme-btn{position:fixed;top:calc(env(safe-area-inset-top, 0px) + 16px);right:16px;z-index:60;box-shadow:var(--shadow-sm)}
-.theme-btn svg{transition:transform var(--motion-base)}
-.theme-btn:hover svg{transform:rotate(-20deg)}
-@media (max-width:760px){.theme-btn{display:none}}
+/* Profil: tema anahtarı dışında her şey etkileşimsiz */
+.prof-id{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-2) 0 var(--space-5)}
+.prof-av{width:56px;height:56px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-pill);background:var(--action-primary-subtle);color:var(--action-primary);font:700 22px/1 var(--font-family)}
+.prof-name{font:var(--type-title-md-weight) var(--type-title-md-size)/var(--type-title-md-line) var(--font-family)}
+.prof-theme.is-toggle{display:flex;width:100%;max-width:none;padding:var(--space-3) 0;margin-bottom:var(--space-5)}
+.prof-tile{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);background:var(--surface-subtle);color:var(--text-primary)}
+.prof-static{max-width:none;padding:var(--space-3) 0;pointer-events:none}
+.prof-static .is-row__title{font-weight:400;color:var(--text-secondary)}
 </style>
 <aside class="side">
 <span class="is-badge is-badge--label is-badge--brand">Tıklanabilir prototip</span>
@@ -122,7 +125,6 @@ button.is-search__box{background:var(--surface-default)}
 <li><b>Yardım</b> bölümünden Canlı Destek'i aç.</li>
 </ol>
 </aside>
-<button type="button" class="is-button is-button--secondary is-button--sm theme-btn" id="themeBtn"></button>
 <div class="phone" id="phone">
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="scrim" id="scrim"></div>
@@ -311,7 +313,7 @@ function openApp(el,name){press(el);if(navigator.vibrate)navigator.vibrate(8);to
 
 /* ---------- alt menü (Senin UI · Bottom nav) ---------- */
 function nav(){
-  const t=(k,l)=>`<button type="button" class="is-nav__tab ${k==="home"?"is-active":""}"${k==="home"?' aria-current="page"':""} aria-label="${l}" onclick="${k==="home"?"goHome()":"toast('Bu sekme prototipte kapalı. Ana Sayfa\\'yı dene.')"}">${fic(k)}<span>${l}</span>${k==="chat"?'<span class="is-nav__badge"><span class="is-badge is-badge--count is-badge--brand is-badge--outlined">6</span></span>':""}</button>`;
+  const t=(k,l)=>`<button type="button" class="is-nav__tab ${k==="home"?"is-active":""}"${k==="home"?' aria-current="page"':""} aria-label="${l}" onclick="${k==="home"?"goHome()":k==="user"?"openProfile()":"toast('Bu sekme prototipte kapalı. Ana Sayfa\\'yı dene.')"}">${fic(k)}<span>${l}</span>${k==="chat"?'<span class="is-nav__badge"><span class="is-badge is-badge--count is-badge--brand is-badge--outlined">6</span></span>':""}</button>`;
   return `<div class="nav-wrap"><nav class="is-nav" aria-label="Ana menü">${t("home","Ana Sayfa")}${t("chat","Sohbet")}<button type="button" class="is-nav__scan" aria-label="QR kod okut" onclick="toast('QR okutma prototipte kapalı.')">${ic("scan",30,2)}</button>${t("wallet","Kartlarım")}${t("user","Profil")}</nav></div>`;
 }
 function goHome(){while(state.stack.length>1)back();const s=state.stack[0].el.querySelector(".scroll");if(s)s.scrollTo({top:0,behavior:"smooth"})}
@@ -436,14 +438,26 @@ const SUN='<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1
 const MOON='<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>';
 const mq=window.matchMedia("(prefers-color-scheme: dark)");
 function currentTheme(){return document.documentElement.dataset.theme||(mq.matches?"dark":"light")}
-function paintThemeBtn(){
-  const dark=currentTheme()==="dark",b=document.getElementById("themeBtn");
-  b.innerHTML=`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${dark?SUN:MOON}</svg><span>${dark?"Açık temaya geç":"Koyu temaya geç"}</span>`;
+function themeIcon(dark){return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${dark?SUN:MOON}</svg>`}
+function paintTheme(){
+  const b=document.getElementById("themeToggle");if(!b)return;
+  const dark=currentTheme()==="dark";
+  b.classList.toggle("is-on",dark);b.setAttribute("aria-checked",dark);b.querySelector(".prof-tile").innerHTML=themeIcon(dark);
 }
-function setTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem("is-theme",t)}catch(e){}paintThemeBtn()}
-document.getElementById("themeBtn").addEventListener("click",()=>{const next=currentTheme()==="dark"?"light":"dark";setTheme(next);toast(next==="dark"?"Koyu temaya geçtin.":"Açık temaya geçtin.")});
-mq.addEventListener?.("change",paintThemeBtn);
-(function(){let t=null;try{t=localStorage.getItem("is-theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;paintThemeBtn()})();
+function setTheme(t){document.documentElement.dataset.theme=t;try{localStorage.setItem("is-theme",t)}catch(e){}paintTheme()}
+function toggleTheme(){setTheme(currentTheme()==="dark"?"light":"dark")}
+function profileHTML(){
+  const dark=currentTheme()==="dark",rows=["Kişisel bilgilerim","Bildirimler","Dil","Yardım"];
+  return `<header class="ghead"><button type="button" class="ib" aria-label="Geri" onclick="back()">${ic("chl",26)}</button><h1>Profil</h1><span style="width:44px"></span></header>
+  <div class="wsheet"><div class="scroll" style="padding:20px 20px 24px">
+    <div class="prof-id"><span class="prof-av" aria-hidden="true">E</span><span class="prof-name">Efe</span></div>
+    <button type="button" id="themeToggle" class="is-toggle prof-theme${dark?" is-on":""}" role="switch" aria-checked="${dark}" onclick="toggleTheme()"><span class="prof-tile">${themeIcon(dark)}</span><span class="is-toggle__text"><span class="is-toggle__label">Koyu tema</span><span class="is-toggle__desc">Ekran renklerini koyu yap</span></span><span class="is-toggle__track"><span class="is-toggle__thumb"></span></span></button>
+    ${rows.map((r,i)=>`<div class="is-row prof-static${i<rows.length-1?" is-row--divider":""}"><span class="is-row__text"><span class="is-row__title">${r}</span></span></div>`).join("")}
+  </div></div>`;
+}
+function openProfile(){push(profileHTML(),"profile")}
+mq.addEventListener?.("change",paintTheme);
+(function(){let t=null;try{t=localStorage.getItem("is-theme")}catch(e){}if(t==="light"||t==="dark")document.documentElement.dataset.theme=t})();
 
 /* başlat */
 (function(){const s=document.createElement("section");s.className="screen";s.innerHTML=homeHTML();phone.insertBefore(s,document.getElementById("toast"));state.stack.push({id:"home",el:s})})();
