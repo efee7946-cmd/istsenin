@@ -9,6 +9,9 @@
 | Yol | Ne |
 | --- | --- |
 | `index.html` | **Güncel prototip (29 Ekim 2026).** 69 uygulama, resmî logolar gömülü, 8 kategori, renkli İstanbul motifli kategori ikonları, Favorilerim (en fazla 3, kalp), A–Z listeler, Keşfet'te etkinlik afişleri. Tek dosya, internet olmadan da açılır |
+| `sunum/demo-day-sunumu.html` | **Insider One Design Camp Demo Day sunumu (31 Ekim 2026).** 26 slayt, görseller ve video gömülü; `E` tuşu düzenleme modunu açar |
+| `sunum/yeni-ozellikler-reels.mp4` | Yeni özellikler videosu: 1080×1920, 19,9 sn. Prototipten kaydedildi; sentez müzik |
+| `logo/` | Outsiders takım logosu: `kit/` (SVG, PNG, web ikonları, kullanım sayfası) ve seçim aşamasındaki üç yön |
 | `prototip/surumler/` | Önceki sürümler: `v00-ilk-hal` (mevcut uygulama, 23 Eylül 2026 ekran görüntülerinden birebir), `v0-eylul` (ilk prototip), `v1-senin-ui` (Senin UI ve ses tonuna göre), `v1-1-tema-qr` (tema butonu, QR düzeltmesi), `v2-24-ekim` (69 uygulama ve logolar; kısayollar ve yıldız ile) |
 | `ab/` | A/B karşılaştırmaları: `tum-uygulamalar-ab` (yalnızca Tüm Uygulamalar), `metin-odakli-ab`, `enerjik-ab` (B: hızlı işlemler, dolgun renkler) |
 | `design-system/senin-ui.html` | Senin UI gezgini: açık ve koyu temada token'lar, 13 bileşen |
